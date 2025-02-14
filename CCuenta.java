@@ -1,3 +1,11 @@
+/**
+ * Esta clase CCuenta, tiene 2 metodos Ingresar y Retirar con sus respectivas Excepciones
+ *
+ * @author Andres Altamirano
+ * @version 1.0
+ * @since 0.9
+ */
+
 public class CCuenta {
 
 
@@ -17,10 +25,21 @@ public class CCuenta {
         setSaldo(sal);
     }
 
+    /**
+     * Devuelve el saldo actual de la cuenta
+     * @return getSaldo (el saldo de la cuenta)
+     */
     public double estado()
     {
         return getSaldo();
     }
+
+    /**
+     * Ingresa una cantidad de dinero a la cuenta
+     * si la cantidad es negativa salta una exception
+     * @param cantidad
+     * @throws Exception
+     */
 
     public void ingresar(double cantidad) throws Exception
     {
@@ -29,6 +48,12 @@ public class CCuenta {
         setSaldo(getSaldo() + cantidad);
     }
 
+    /**
+     * Retira una cantidad de dinero de la cuenta
+     * Si la cantidad a retirar es negativa salta una exception
+     * @param cantidad
+     * @throws Exception
+     */
     public void retirar(double cantidad) throws Exception
     {
         if (cantidad <= 0)
@@ -38,34 +63,66 @@ public class CCuenta {
         setSaldo(getSaldo() - cantidad);
     }
 
+    /**
+     * Un get para obtener un nombre
+     * @return getNombre (nombre)
+     */
     public String getNombre() {
         return nombre;
     }
 
+    /**
+     * Enviar un nombre
+     * @param nombre
+     */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
+    /**
+     * Obtener la cuenta
+     * @return getCuenta()
+     */
     public String getCuenta() {
         return cuenta;
     }
 
+    /**
+     * Enviar una cuenta
+     * @param cuenta
+     */
     public void setCuenta(String cuenta) {
         this.cuenta = cuenta;
     }
 
+    /**
+     * Obtener el saldo
+     * @return saldo
+     */
     public double getSaldo() {
         return saldo;
     }
 
+    /**
+     * Enviar un saldo
+     * @param saldo
+     */
     public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
 
+    /**
+     * Obtener el tipo de interes
+     * @return tipoInteres
+     */
     public double getTipoInterés() {
         return tipoInterés;
     }
 
+    /**
+     * Enviar un tipo de interes
+     * @param tipoInterés
+     */
     public void setTipoInterés(double tipoInterés) {
         this.tipoInterés = tipoInterés;
     }
